@@ -1,0 +1,12 @@
+# ESP32 to L298N & Sensor Pinout
+motors:
+  left_pwm: 18
+  left_in1: 19
+  left_in2: 21
+  right_pwm: 22
+  right_in3: 23
+  right_in4: 25
+sensors:
+  ultrasonic_trig: 5
+  ultrasonic_echo: 17
+  servo_pwm: 16
