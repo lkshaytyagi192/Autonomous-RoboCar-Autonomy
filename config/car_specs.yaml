@@ -1,0 +1,6 @@
+chassis:
+  wheelbase_width_m: 0.145
+  wheel_radius_m: 0.0325
+  weight_kg: 0.85
+  max_linear_speed_mps: 0.8
+  max_angular_speed_radps: 4.5
