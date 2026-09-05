@@ -17,3 +17,4 @@ class MotorController:
             "left": {"pwm": self.radps_to_pwm(left), "in1": 1 if left > 0 else 0, "in2": 1 if left < 0 else 0},
             "right": {"pwm": self.radps_to_pwm(right), "in3": 1 if right > 0 else 0, "in4": 1 if right < 0 else 0}
         }
+    def reset_e_stop(self): self.e_stop = False
