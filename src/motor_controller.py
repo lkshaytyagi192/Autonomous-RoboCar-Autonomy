@@ -7,3 +7,8 @@ class MotorController:
         if abs(radps) < 0.1: return 0
         duty = int(self.min_duty + (abs(radps) / self.max_radps) * (self.max_duty - self.min_duty))
         return min(max(duty, self.min_duty), self.max_duty)
+    def compute_motor_commands(self, left: float, right: float) -> dict:
+        return {
+            "left": {"pwm": self.radps_to_pwm(left), "in1": 1 if left > 0 else 0, "in2": 1 if left < 0 else 0},
+            "right": {"pwm": self.radps_to_pwm(right), "in3": 1 if right > 0 else 0, "in4": 1 if right < 0 else 0}
+        }
