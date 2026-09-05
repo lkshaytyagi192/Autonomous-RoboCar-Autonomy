@@ -1,0 +1,3 @@
+deadzone:
+  min_effective_pwm: 45
+  stall_prevention_margin: 5
