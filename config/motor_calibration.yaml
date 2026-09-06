@@ -1,0 +1,7 @@
+calibration:
+  - pwm: 60
+    rpm: 35
+  - pwm: 120
+    rpm: 80
+  - pwm: 255
+    rpm: 195
