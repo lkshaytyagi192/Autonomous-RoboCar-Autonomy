@@ -1,0 +1,4 @@
+thresholds:
+  emergency_stop_cm: 15.0
+  warning_cm: 35.0
+  clear_cm: 60.0
