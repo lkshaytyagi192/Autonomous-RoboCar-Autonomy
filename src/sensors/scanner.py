@@ -9,9 +9,8 @@ class ObstacleScanner:
         best = max(self.profile, key=self.profile.get)
         return best, self.profile[best]
     def to_points(self) -> list:
-        pts = []
-        for a, d in self.profile.items():
-            rad = np.deg2rad(a)
-            m = d / 100.0
-            pts.append((round(float(m * np.cos(rad)), 3), round(float(m * np.sin(rad)), 3)))
-        return pts
+        angs = np.deg2rad(list(self.profile.keys()))
+        dists = np.array(list(self.profile.values())) / 100.0
+        xs = dists * np.cos(angs)
+        ys = dists * np.sin(angs)
+        return [(round(float(x), 3), round(float(y), 3)) for x, y in zip(xs, ys)]
