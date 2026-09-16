@@ -3,6 +3,7 @@ class RobotState(Enum):
     IDLE = auto()
     CRUISE = auto()
     OBSTACLE_DETECTED = auto()
+    EVADING = auto()
     REVERSING = auto()
 
 class NavigationFSM:
@@ -11,13 +12,13 @@ class NavigationFSM:
         self.stop_cm = stop_cm
         self.warn_cm = warn_cm
         self.speed = speed
-    def update(self, dist_cm: float) -> tuple:
+    def update(self, dist_cm: float, best_w: float = 1.8) -> tuple:
         if dist_cm <= self.stop_cm:
             self.state = RobotState.REVERSING
             return self.state, -0.2, 0.0
         elif dist_cm <= self.warn_cm:
-            self.state = RobotState.OBSTACLE_DETECTED
-            return self.state, 0.0, 1.8
+            self.state = RobotState.EVADING
+            return self.state, 0.05, best_w
         else:
             self.state = RobotState.CRUISE
             return self.state, self.speed, 0.0
