@@ -1,0 +1,2 @@
+# FSM Transitions
+IDLE -> CRUISE -> EVADING -> REVERSE
