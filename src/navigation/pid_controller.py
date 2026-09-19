@@ -4,6 +4,8 @@ class PIDController:
         self.min_o, self.max_o = limits
         self.alpha = alpha
         self.prev_e = 0.0; self.integral = 0.0; self.filt_d = 0.0
+    def reset(self):
+        self.prev_e = 0.0; self.integral = 0.0; self.filt_d = 0.0
     def compute(self, target: float, measured: float, dt: float) -> float:
         if dt <= 0: return 0.0
         e = target - measured
