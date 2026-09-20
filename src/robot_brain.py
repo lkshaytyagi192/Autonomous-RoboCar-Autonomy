@@ -2,6 +2,7 @@ from src.kinematics import DifferentialDriveKinematics
 from src.motor_controller import MotorController
 from src.navigation.fsm import NavigationFSM
 class AutonomousRobotBrain:
+    __slots__ = ('kin', 'motors', 'fsm')
     def __init__(self):
         self.kin = DifferentialDriveKinematics()
         self.motors = MotorController()
