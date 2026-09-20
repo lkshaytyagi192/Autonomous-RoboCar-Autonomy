@@ -11,3 +11,4 @@ class AutonomousRobotBrain:
         wl, wr = self.kin.inverse_kinematics(v, w)
         sigs = self.motors.step(wl, wr, dt)
         return {"state": state.name, "cmd_v": v, "cmd_w": w, "motors": sigs}
+    def e_stop(self): self.motors.e_stop = True
