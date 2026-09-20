@@ -1,6 +1,7 @@
 # Autonomous RoboCar Autonomy
 
-## Status: Week 2 Complete
+## Status: Week 3 Complete
 - Kinematics & Motor Control
-- Ultrasonic sensor driver with hybrid noise rejection
-- SG90 servo radar obstacle scanner
+- Sensors & Digital Filters
+- FSM Navigation & PID Controller
+- Unified Robot Brain Architecture
