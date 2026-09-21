@@ -6,3 +6,7 @@ class TelemetryPacket:
             "ts": round(time.time(), 3), "state": state, "dist_cm": round(dist, 1),
             "v_mps": round(v, 2), "w_radps": round(w, 2), "batt_v": round(batt, 2)
         })
+    @staticmethod
+    def parse(s: str) -> dict:
+        try: return json.loads(s)
+        except Exception: return {}
