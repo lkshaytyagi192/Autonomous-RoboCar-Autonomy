@@ -1,5 +1,6 @@
 import numpy as np
 class SimulatedCar:
+    __slots__ = ('x', 'y', 'th')
     def __init__(self, x: float = 0, y: float = 0, th: float = 0):
         self.x = x; self.y = y; self.th = th
     def step(self, v: float, w: float, dt: float = 0.05):
