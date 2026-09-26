@@ -1,0 +1,4 @@
+render:
+  dpi: 200
+  figure_size: [10, 6]
+  line_width: 2.5
