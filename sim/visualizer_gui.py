@@ -10,6 +10,8 @@ def plot_arena(trajectory, obstacles):
     ax.plot(xs, ys, 'b-', linewidth=2, label="Traveled Path")
     ax.scatter([xs[0]], [ys[0]], color='green', s=100, label="Start Pose")
     ax.scatter([xs[-1]], [ys[-1]], color='purple', s=100, label="End Pose")
+    ax.text(0.02, 0.95, f"Steps: {len(trajectory)} | Status: Autonomous Evasion Active",
+            transform=ax.transAxes, bbox=dict(boxstyle='round', facecolor='white', alpha=0.8))
     ax.grid(True, linestyle=":", alpha=0.6)
     ax.legend()
     plt.tight_layout()
