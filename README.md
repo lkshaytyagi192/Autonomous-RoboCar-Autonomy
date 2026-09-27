@@ -1,7 +1,8 @@
 # Autonomous RoboCar Autonomy
 
-## Status: Week 3 Complete
+## Status: Week 4 Complete
 - Kinematics & Motor Control
-- Sensors & Digital Filters
-- FSM Navigation & PID Controller
-- Unified Robot Brain Architecture
+- Sensors & Digital Filtering
+- FSM & PID Navigation
+- 2D Kinematic Simulation & Raycaster
+- Real-time Telemetry Engine
