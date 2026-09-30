@@ -6,7 +6,7 @@
 [![Architecture: FSM + PID](https://img.shields.io/badge/Control-FSM%20%2B%20PID-green.svg)](#)
 [![Status: Production Ready](https://img.shields.io/badge/Status-Complete-brightgreen.svg)](#)
 
-A modular, embedded autonomous navigation framework for 2-wheel differential drive robotic vehicles.
+A modular, embedded autonomous navigation framework for 2-wheel differential drive robotic vehicles. Features forward/inverse kinematics, hybrid sensor noise filtering, multi-angle radar corridor sweeping, a finite state machine (FSM), and closed-loop PID control.
 
 ---
 
@@ -22,3 +22,24 @@ graph TD
     F --> G["L298N PWM Motor Driver"]
     G --> H["Physical Wheels / Propulsion"]
 ```
+
+---
+
+## ⚡ Quickstart
+
+### 1. Run Automated Unit Tests
+```bash
+python main.py --mode test
+```
+
+### 2. Run 2D Autonomous Navigation Simulation
+```bash
+python main.py --mode sim
+```
+
+---
+
+## 👨‍💻 Author
+**LKSHAY TYAGI**  
+*SRM Institute of Science and Technology, Delhi-NCR*  
+*Specialization: Autonomous Systems, Robotics & Embedded Intelligence*
